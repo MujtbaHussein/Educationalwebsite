@@ -1,0 +1,834 @@
+/* 
+=========================
+          Header
+=========================
+*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*NOTE: Becacuse we wanna make it sticky later we are setting a fix height */
+  height: 9.6rem;
+  padding: 0 4.8rem;
+  background-color: #fdf2e9;
+  position: relative;
+}
+
+.logo {
+  height: 2.2rem;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  font-size: 1.8rem;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #cf711f;
+}
+
+.main-cta:link,
+.main-cta:visited {
+  background-color: #e67e22;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+}
+
+.main-cta:hover,
+.main-cta:active {
+  background-color: #cf711f;
+}
+
+.btn-mobile-nav {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  display: none;
+}
+
+.icon-mobile-nav {
+  font-size: 3.6rem;
+  color: #333;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+
+/* STICKY NAVIGATION  */
+
+.sticky .header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 999;
+  height: 8rem;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.sticky .hero-section {
+  margin-top: 9.6rem;
+}
+
+/* 
+=========================
+      Hero section
+=========================
+*/
+
+.hero-section {
+  background-color: #fdf2e9;
+  padding: 1.6rem 0 9.6rem 0;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 6.4rem;
+  padding-top: 1.6rem;
+  margin: 0 auto;
+  gap: 9.6rem;
+  align-items: center;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+.hero-text-box {
+  padding-top: 1.6rem;
+}
+
+.hero-heading {
+  font-size: 5.2rem;
+  padding-bottom: 4rem;
+  color: #333;
+}
+
+.hero-description {
+  font-size: 2rem;
+  padding-bottom: 6rem;
+  letter-spacing: 0.5;
+  line-height: 1.7;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 4rem;
+  margin-bottom: 6.4rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1.5rem 3rem;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.btn--primary:link,
+.btn--primary:visited {
+  background-color: #e67e22;
+  color: #fff;
+}
+
+.btn--primary:active,
+.btn--primary:hover {
+  background-color: #cf711f;
+  color: #fff;
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+  background-color: #fff;
+  color: #555;
+}
+
+.btn--outline:active,
+.btn--outline:hover {
+  box-shadow: inset 0px 0px 0px 3px #fff;
+  color: #555;
+}
+
+.deliverd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.6rem;
+  padding-top: 2rem;
+}
+
+.deliverd-text {
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+.customers {
+  display: flex;
+}
+
+.customers img {
+  width: 50px;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  margin-right: 1rem;
+  margin-right: -1.6rem;
+  border: 3px solid #fdf2e9;
+}
+
+.deliverd-bold-num {
+  color: #cf711f;
+}
+
+/* 
+=========================
+       featured in  
+=========================
+*/
+.section-featured {
+  padding: 4.8rem 0 3.2rem 0;
+}
+
+.logos-heading {
+  text-align: center;
+  padding-bottom: 2.4rem;
+}
+
+.logos img {
+  height: 3rem;
+  filter: brightness(0);
+  opacity: 0.5;
+}
+
+.logos {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2.4rem;
+}
+
+/* 
+=========================
+       How it works 
+=========================
+*/
+.section-how {
+  padding: 9.6rem 0;
+}
+
+.subheading {
+  display: block;
+  color: #cf711f;
+  font-size: 1.6rem;
+  margin-bottom: 1.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.heading-secondary {
+  font-size: 4.4rem;
+  font-weight: 700;
+  color: #333;
+  padding-bottom: 3.6rem;
+}
+
+.how-heading {
+  font-size: 2.8rem;
+  color: #333;
+  padding-bottom: 3.6rem;
+}
+
+.how-text {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #555;
+  line-height: 1.7;
+  align-items: center;
+  padding-right: 2.4rem;
+}
+
+.how-img-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.how-img-box::after,
+.how-img-box::before {
+  content: "";
+  display: block;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -45%);
+  border-radius: 50%;
+}
+
+.how-img-box::before {
+  width: 60%;
+  /* height: 60%; */
+  padding-bottom: 60%;
+
+  background-color: #fdf2e9;
+  z-index: -1;
+}
+
+.how-img-box::after {
+  width: 45%;
+  /* height: 60%; */
+  padding-bottom: 45%;
+
+  background-color: #fae5d3;
+  z-index: -1;
+}
+
+.how-img {
+  width: 35%;
+  padding-top: 3.2rem;
+}
+
+.how-description {
+  padding-top: 9.4rem;
+  display: inline-block;
+}
+
+/* 
+=========================
+      meals-section 
+=========================
+*/
+
+.section-AI {
+  padding: 9.6rem 0;
+}
+
+.AI-heading-sm,
+.AI-heading {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.AI-heading-sm {
+  color: #cf711f;
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+.AI-heading {
+  font-size: 4.6rem;
+  padding-bottom: 6.4rem;
+}
+
+.meal {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.meal-img {
+  width: 100%;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  margin-bottom: 2.4rem;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.meal-title {
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin-bottom: 2.4rem;
+}
+
+.vegetarian-tag {
+  background-color: #51cf66;
+}
+
+.vegan-tag {
+  background-color: #fab005;
+}
+
+.paleo-tag {
+  background-color: #74b816;
+}
+
+.meal-attributes {
+  width: 32rem;
+  font-size: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  font-weight: 500;
+  color: #555;
+}
+
+ion-icon {
+  color: #cf711f;
+  font-size: 2.4rem;
+  padding-right: 1.4rem;
+}
+
+.diet-list h2 {
+  font-size: 3.2rem;
+  padding-bottom: 2.4rem;
+  font-weight: 700;
+}
+
+.diet-list ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  font-size: 1.8rem;
+}
+
+.meal {
+  box-shadow: 0 2.4rem 2.4rem rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.meal:hover {
+  transition: 0.3s;
+  transform: translateY(-1.2rem);
+}
+
+.meal-contant {
+  padding: 3.2rem 4.8rem 4.8rem 4.8rem;
+}
+
+.all-recipes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10rem;
+}
+
+.link {
+  font-size: 1.8rem;
+  color: #cf711f;
+}
+
+.link:link,
+.link:visited {
+  color: #e67e22;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  transition: all 0.3s;
+}
+
+.link:hover,
+.link:active {
+  color: #cf711f;
+  border-bottom: 1px solid transparent;
+}
+
+/* 
+=========================
+   Testemonial-section 
+=========================
+*/
+
+.section-testimonials {
+  background-color: #fdf2e9;
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  align-items: center;
+}
+
+.testemonial {
+  padding: 9.6rem;
+}
+
+.testemonial h4 {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: #e67e22;
+  margin-bottom: 1.2rem;
+}
+
+.testemonial h1 {
+  font-size: 4.4rem;
+  margin-bottom: 5.2rem;
+  color: #555;
+}
+
+.user-img {
+  width: 60px;
+  margin-bottom: 2rem;
+}
+
+.user-img img {
+  width: 100%;
+  border-radius: 50px;
+}
+
+.user-comment {
+  font-size: 1.7rem;
+  line-height: 1.8;
+  margin-bottom: 1.4rem;
+}
+
+.user-name {
+  font-size: 1.8rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+  justify-content: start;
+  padding: 1.6rem;
+}
+
+.gallery-img {
+  overflow: hidden;
+}
+
+.gallery-img img {
+  width: 100%;
+}
+
+.gallery-img img:hover {
+  transition: all 0.3s;
+  transform: scale(110%);
+}
+
+/* 
+=========================
+   Pricing-section 
+=========================
+*/
+
+.section-pricing {
+  padding-top: 6.4rem;
+}
+
+.pricing .heading-primary {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: #e67e22;
+  margin-bottom: 1.2rem;
+}
+
+.pricing .heading-secondary {
+  font-size: 4.6rem;
+  margin-bottom: 5.2rem;
+  color: #555;
+}
+
+.posters {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+}
+
+.poster {
+  padding: 0rem 4.2rem;
+  border-radius: 10px;
+  width: 75%;
+}
+
+.poster li {
+  display: flex;
+  align-items: center;
+}
+
+.poster-starter {
+  border: 2px solid #fdf2e9;
+  justify-self: end;
+}
+
+.poster-compelete {
+  background-color: #fdf2e9;
+  position: relative;
+  overflow: hidden;
+}
+
+.poster-compelete::after {
+  content: "BEST VALUE";
+  position: absolute;
+  top: 2.6rem;
+  right: -3.2rem;
+
+  background-color: #fab005;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0.8rem 3.2rem;
+  color: #333;
+  transform: rotate(45deg);
+  font-size: 1.4rem;
+  font-weight: 700;
+  overflow: hidden;
+}
+
+.poster h3 {
+  text-align: center;
+  color: #cf711f;
+  font-size: 3.6rem;
+  text-transform: uppercase;
+  padding: 2.4rem;
+}
+
+.price {
+  color: #333;
+  font-size: 6.2rem;
+  text-align: center;
+  padding-bottom: 2.4rem;
+}
+
+.price span {
+  font-size: 3rem;
+}
+
+.poster h5 {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 3.6rem;
+}
+
+.benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 1.8rem;
+  margin-bottom: 3.5rem;
+}
+
+.poster-btn {
+  text-align: center;
+  margin-bottom: 4.6rem;
+  margin-top: 5.6rem;
+}
+
+.btn--full {
+  background-color: #e67e22;
+  color: #fff;
+  text-align: center;
+}
+
+.btn--full:link,
+.btn--full:visited {
+  background-color: #e67e22;
+  color: #fff;
+}
+
+.btn--full:active,
+.btn--full:hover {
+  background-color: #cf711f;
+  color: #fff;
+}
+
+.features-heading {
+  color: #333;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 8.4rem;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0 auto;
+}
+
+.feature-icon {
+  font-size: 3.2rem;
+  margin-bottom: 3.6rem;
+  padding: 1.2rem;
+  background-color: #fae5d3;
+  border: 1px solid transparent;
+  border-radius: 50px;
+}
+
+.feature-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 1.4rem;
+}
+
+.feature-text {
+  font-size: 1.8rem;
+  line-height: 1.7;
+  width: 85%;
+  color: #333;
+}
+
+/* 
+=========================
+      cta section
+=========================
+*/
+
+.cta-section {
+  padding: 9.6rem 0 12.8rem 0;
+}
+
+.cta-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  background-color: #e67e22;
+  border: 0px solid transparent;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.cta-form {
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+}
+
+.cta-img-box {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(235, 151, 78, 0.35),
+      rgba(230, 125, 34, 0.35)
+    ),
+    url(../img/eating.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.cta-img img {
+  width: 400px;
+}
+
+.cta-texts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3.6rem 1.4rem;
+  margin: 0 auto;
+}
+
+.cta-heading {
+  font-size: 4.4rem;
+  font-weight: 700;
+  padding-bottom: 4.2rem;
+}
+
+.cta-text {
+  font-size: 1.8rem;
+  line-height: 1.7;
+}
+
+.cta-inputs {
+  width: 90%;
+  align-items: end;
+  padding: 3.6rem 1.4rem;
+}
+
+.cta-inputs div {
+  display: flex;
+  flex-direction: column;
+}
+
+.cta-inputs label {
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding-bottom: 0.8rem;
+}
+
+.cta-inputs input,
+.cta-inputs select {
+  width: 100%;
+  padding: 1.2rem;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-family: inherit;
+}
+.btn--form {
+  font-size: 1.6rem;
+  font-weight: 700;
+  background-color: #45260a;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.btn--form:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+/* 
+=========================
+      Footer
+=========================
+*/
+
+.footer-section {
+  padding: 12.8rem 0;
+  border-top: 1px solid #eee;
+}
+footer {
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+  column-gap: 6.4rem;
+}
+.logos-col,
+.address-col,
+.nav-col,
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  font-size: 1.6rem;
+  align-items: start;
+}
+.footer-logo {
+  padding-bottom: 2.2rem;
+}
+.logo {
+  height: 2rem;
+}
+.social-links {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 4.6rem;
+}
+
+.copy-right {
+  font-size: 1.4rem;
+  line-height: 1.8;
+}
+
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding-bottom: 2.4rem;
+  color: #333;
+}
+
+footer li a {
+  text-decoration: none;
+  color: #555;
+}

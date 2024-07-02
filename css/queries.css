@@ -1,0 +1,267 @@
+/* rem and em do not depend on html font-size in media queries inedted 1rem = 1em = 16px*/
+
+/*==================================
+ BWLOW 1344px (for smaller desktops)
+ =================================== */
+
+@media (max-width: 84em) {
+  .hero {
+    max-width: 1200px;
+  }
+  .hero-heading {
+    font-size: 4.4em;
+  }
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero-description {
+    font-size: 1.6em;
+  }
+}
+
+/*==================================
+ BELOW 1200px (Landscape Tablets)
+ =================================== */
+
+@media (max-width: 75em) {
+  html {
+    /* 9/16 = 0.5625=56.255 */
+    font-size: 56.25%;
+  }
+
+  .grid {
+    column-gap: 4.8em;
+    row-gap: 6.4em;
+  }
+  .hero {
+    gap: 4.6rem;
+  }
+  .testemonial {
+    padding: 9.6em 3.2em;
+  }
+}
+
+/*====================
+ BELOW 944px (Tablets)
+ ======================*/
+
+@media (max-width: 59em) {
+  html {
+    font-size: 50%;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .hero-heading {
+    text-align: center;
+  }
+  .hero-description {
+    font-size: 2em;
+    text-align: center;
+    width: 100%;
+  }
+  .hero-buttons {
+    justify-content: center;
+  }
+  .hero-img-box {
+    text-align: center;
+  }
+  .hero-img {
+    width: 75%;
+  }
+  .logos {
+    justify-content: space-around;
+  }
+  .logos img {
+    height: 2.4em;
+  }
+  .diet-list h2 {
+    font-size: 2.4rem;
+  }
+  .section-testimonials {
+    grid-template-columns: 1fr;
+  }
+  .gallery {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .cta-inputs {
+    grid-template-columns: 1fr !important;
+    row-gap: 2.4rem;
+    padding: 0;
+    width: 100%;
+  }
+  .cta-container {
+    grid-template-columns: 3fr 2fr;
+  }
+
+  /*
+ =======================
+ MOBILE NAVIGATION
+ =======================
+  */
+
+  .btn-mobile-nav {
+    display: block;
+  }
+  .main-nav {
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    transform: translateX(100%);
+
+    transition: all 0.8s ease-out;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Hide navigation */
+    /* Allows NO transition at all */
+    /* display: none; */
+
+    /* 1) Hide it visually */
+    opacity: 0;
+
+    /* 2) Make it unaccessible to mouse and keyboard */
+    pointer-events: none;
+
+    /* 3) Hide it form screen readers */
+    visibility: hidden;
+  }
+  header {
+    width: 100%;
+  }
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0%);
+  }
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: none;
+  }
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: block;
+  }
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+    padding-left: 2.4rem;
+  }
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
+  }
+}
+/*====================
+ BELOW 704px (smaller Tablets)
+ ======================*/
+@media (max-width: 44em) {
+  .grid--2cols,
+  .grid--3cols,
+  .grid--4cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .diet-list {
+    grid-column: 1/-1;
+    justify-self: center;
+  }
+  .poster {
+    width: 100%;
+  }
+  .poster h3 {
+    font-size: 2.4em;
+  }
+  footer {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .nav-col {
+    grid-row: 1;
+    grid-column: span 2;
+  }
+  .logos-col,
+  .address-col {
+    grid-column: span 3;
+  }
+}
+
+/*====================
+ BELOW 544px (Phones)
+ ======================*/
+@media (max-width: 34em) {
+  .grid {
+    row-gap: 4.8rem;
+  }
+  .grid--2cols,
+  .grid--3cols,
+  .grid--4cols {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .hero-heading {
+    font-size: 4.1rem;
+  }
+  .hero {
+    padding: 0 3.2em;
+  }
+  .hero-buttons {
+    gap: 1.4rem;
+  }
+  .btn {
+    padding: 2.4rem 1.6rem;
+  }
+
+  .customers img {
+    width: 40px;
+  }
+  .logos img {
+    height: 1.2rem;
+  }
+  .logos {
+    padding: 0;
+  }
+  .how-img-1 {
+    grid-row: 1;
+  }
+  .how-img-3 {
+    grid-row: 5;
+  }
+  .heading-secondary {
+    font-size: 3.6rem;
+  }
+  .how-heading {
+    font-size: 2.4rem;
+  }
+  .AI-heading {
+    font-size: 3.8rem;
+  }
+  .meal {
+    width: 85%;
+    justify-self: center;
+  }
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .posters {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .cta-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .cta-img-box {
+    height: 36rem;
+    grid-row: 1;
+  }
+  .cta-heading {
+    font-size: 3.6rem;
+  }
+  .cta-texts,
+  .cta-inputs {
+    padding: 3.2rem;
+  }
+  .cta-form {
+    padding: 0;
+  }
+}
